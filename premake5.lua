@@ -7,7 +7,7 @@ project "ImGui"
 	objdir ("bin-int/" .. outputDir .. "/%{prj.name}")
 
 	files
-	{
+    {
 		"imconfig.h",
 		"imgui.h",
 		"imgui.cpp",
@@ -20,6 +20,10 @@ project "ImGui"
 		"imstb_truetype.h",
 		"imgui_demo.cpp"
 	}
+
+    includedirs {
+        "../glm/glm"
+    }
 
 	filter "system:windows"
 		systemversion "latest"
